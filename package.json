@@ -1,0 +1,211 @@
+{
+  "name": "@abaccus/koapression",
+  "description": "Koa compression middleware",
+  "version": "1.0.0",
+  "contributors": [
+    "Antonio Bourassa <abourassa@assetval.com>"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "@getify/eslint-plugin-proper-ternary": "^3.0.1",
+    "after": "0.8.2",
+    "eslint": "^6.5.1",
+    "eslint-config-airbnb-base": "14.0.0",
+    "eslint-import-resolver-node": "0.3.2",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-markdown": "1.0.0",
+    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-security": "^1.4.0",
+    "koa": "^2.8.2",
+    "mocha": "^6.2.1",
+    "nyc": "^14.1.1",
+    "supertest": "^4.0.2"
+  },
+  "engines": {
+    "node": "10.16.3",
+    "npm": "6.11.2"
+  },
+  "scripts": {
+    "test": "mocha --check-leaks --reporter spec --bail",
+    "test-cov": "nyc cover node_modules/mocha/bin/_mocha -- --check-leaks --reporter dot"
+  },
+  "eslintConfig": {
+    "plugins": [
+      "node",
+      "security",
+      "@getify/proper-ternary"
+    ],
+    "extends": [
+      "airbnb-base",
+      "plugin:node/recommended",
+      "plugin:security/recommended",
+      "plugin:import/errors",
+      "plugin:import/warnings",
+      "plugin:@getify/proper-ternary/getify-says"
+    ],
+    "env": {
+      "shared-node-browser": true,
+      "node": true,
+      "es6": true
+    },
+    "rules": {
+      "arrow-parens": [
+        "error",
+        "as-needed",
+        {
+          "requireForBlockBody": true
+        }
+      ],
+      "no-unused-vars": "off",
+      "one-var": [
+        "error",
+        {
+          "var": "consecutive",
+          "let": "consecutive",
+          "const": "never"
+        }
+      ],
+      "one-var-declaration-per-line": "off",
+      "consistent-return": "off",
+      "func-names": "off",
+      "max-len": "off",
+      "no-unused-expressions": "off",
+      "no-console": "off",
+      "no-shadow": [
+        "error",
+        {
+          "hoist": "never",
+          "allow": [
+            "done",
+            "resolve",
+            "err",
+            "error",
+            "cb",
+            "User",
+            "user",
+            "issue"
+          ]
+        }
+      ],
+      "no-param-reassign": "off",
+      "no-prototype-builtins": "off",
+      "newline-per-chained-call": "off",
+      "no-lonely-if": "error",
+      "no-new-object": "error",
+      "object-curly-newline": [
+        "error",
+        {
+          "multiline": true,
+          "consistent": true
+        }
+      ],
+      "no-underscore-dangle": "off",
+      "object-curly-spacing": [
+        "error",
+        "never"
+      ],
+      "object-shorthand": [
+        "error",
+        "consistent"
+      ],
+      "prefer-destructuring": "off",
+      "space-before-blocks": "off",
+      "space-before-function-paren": [
+        "error",
+        "never"
+      ],
+      "prefer-rest-params": "off",
+      "import/newline-after-import": "off"
+    }
+  },
+  "stylelint": {
+    "extends": "stylelint-config-standard",
+    "plugins": [
+      "stylelint-scss"
+    ],
+    "rules": {
+      "font-family-no-missing-generic-family-keyword": false,
+      "max-empty-lines": 2,
+      "unit-whitelist": [
+        "px",
+        "em",
+        "rem",
+        "%",
+        "s",
+        "deg",
+        "vh",
+        "vw",
+        "ms"
+      ],
+      "media-feature-name-no-unknown": [
+        true,
+        {
+          "ignoreMediaFeatureNames": [
+            "/^prefers-/",
+            "custom"
+          ]
+        }
+      ],
+      "selector-list-comma-newline-after": "never-multi-line",
+      "comment-empty-line-before": "never",
+      "declaration-block-no-duplicate-properties": [
+        true,
+        {
+          "ignore": [
+            "consecutive-duplicates"
+          ]
+        }
+      ],
+      "number-leading-zero": "never",
+      "no-descending-specificity": null,
+      "rule-empty-line-before": [
+        "always",
+        {
+          "except": [
+            "after-single-line-comment",
+            "inside-block-and-after-rule",
+            "inside-block",
+            "first-nested"
+          ]
+        }
+      ]
+    }
+  },
+  "nodemonConfig": {
+    "events": {
+      "start": "cls || clear"
+    },
+    "ignore": [
+      "log/"
+    ]
+  },
+  "browserslist": [
+    "last 2 version",
+    "> 1%",
+    "not ie <= 8",
+    "not dead"
+  ],
+  "snyk": true,
+  "main": "src/index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "debug": "^4.1.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Abourass/koapression.git"
+  },
+  "keywords": [
+    "compression",
+    "koa",
+    "brotli"
+  ],
+  "author": "Abourass",
+  "bugs": {
+    "url": "https://github.com/Abourass/koapression/issues"
+  },
+  "homepage": "https://github.com/Abourass/koapression#readme"
+}
