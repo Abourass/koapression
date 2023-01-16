@@ -10,7 +10,7 @@
     "@getify/eslint-plugin-proper-ternary": "^3.0.1",
     "after": "0.8.2",
     "eslint": "^6.5.1",
-    "eslint-config-airbnb-base": "14.0.0",
+    "eslint-config-airbnb-base": "14.2.1",
     "eslint-import-resolver-node": "0.3.2",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-markdown": "3.0.0",
